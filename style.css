@@ -1,0 +1,21 @@
+header, main, section, footer {
+    margin: 10px 0;
+    
+    padding: 10px;
+  }
+  
+header {
+  border: 1px solid red;
+}
+
+main{
+  border: 1px solid blue;
+}
+
+section {
+  border: 1px solid orange;
+}
+
+footer{
+  border: 1px solid yellow;
+}
