@@ -10,12 +10,18 @@
 <body>
   <header>
       <h1> Introdução à Economia 💡 </h1>
-      <nav>
-        <a href="#mao-invisivel"> Mão Invisível</a>
-        <a href="#micro-macro"> Micro e Macroeconomia</a>
-        <a href="#matematica"> Matemática na Economia</a>
-        <a href="#desafio"> Desafio do Economista</a>
-        <a href="#conclusao"> Conclusão</a>
+      <div class="hamburger" id="hamburger-menu" aria-label="Abrir menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="#mao-invisivel"> Mão Invisível</a></li>
+          <li><a href="#micro-macro"> Micro e Macroeconomia</a></li>
+          <li><a href="#matematica"> Matemática na Economia</a></li>
+          <li><a href="#desafio"> Desafio do Economista</a></li>  
+          <li><a href="#conclusao"> Conclusão</a></li>
       </nav>
   </header>  
 
@@ -68,5 +74,23 @@
   <footer>
      <p>© 2025 UECE. Universidade Estadual do Ceará!</p>
   </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger-menu');
+    const nav = document.getElementById('main-nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    hamburger.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        nav.classList.toggle('open');
+      }
+    });
+    // Fecha o menu ao clicar em um link (mobile UX)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
