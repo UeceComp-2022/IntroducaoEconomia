@@ -1,21 +1,165 @@
-header, main, section, footer {
-    margin: 10px 0;
-    
-    padding: 10px;
-  }
-  
-header {
-  border: 1px solid red;
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
 }
 
-main{
-  border: 1px solid blue;
+header {
+  background: #00c389;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 24px 0 12px 0;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+header nav {
+  margin-top: 8px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: text-decoration 0.2s;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 12px 32px 12px;
 }
 
 section {
-  border: 1px solid orange;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  margin-bottom: 32px;
+  padding: 28px 24px 20px 24px;
+  border: none;
 }
 
-footer{
-  border: 1px solid yellow;
+#mao-invisivel {
+  background: #00c389;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 12px #0002;
+  margin-bottom: 32px;
+}
+#mao-invisivel h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+#mao-invisivel div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+#mao-invisivel img {
+  max-width: 90px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px #0002;
+}
+#mao-invisivel p {
+  color: #fff;
+  font-size: 1.08rem;
+  margin: 0;
+}
+#mao-invisivel ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+#mao-invisivel ul li a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#micro-macro {
+  display: flex;
+  gap: 24px;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+#micro-macro > div {
+  flex: 1;
+  background: #3b7ddd;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 24px 18px;
+  margin: 0;
+  text-align: center;
+}
+#micro-macro > div:last-child {
+  background: #ffe44d;
+  color: #222;
+}
+#micro-macro h3 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+#micro-macro ul {
+  text-align: left;
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+}
+
+#matematica {
+  background: #fff;
+  color: #222;
+  border-left: 8px solid #00c389;
+}
+#desafio {
+  background: #fff;
+  color: #222;
+  border-left: 8px solid #e53935;
+}
+#conclusao {
+  background: #fff;
+  color: #222;
+  border-left: 8px solid #3b7ddd;
+}
+
+footer {
+  background: #fffbe6;
+  color: #222;
+  border: none;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 8px #0001;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 0 4px 32px 4px;
+  }
+  #micro-macro {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
